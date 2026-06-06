@@ -1,3 +1,9 @@
+---
+title: Age-based guide
+layout: default
+nav_order: 2
+---
+
 # Age-based guide to teaching kids about internet safety
 
 Treat teaching your kids about internet safety like learning to cross a street or answer the door. Most people are fine, but kids need skills to notice problems, protect themselves, and ask for help.
