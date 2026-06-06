@@ -1,6 +1,8 @@
 title: Internet Safety
 description: Teaching kids how to live safely in an constantly connected world.
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
 
 url: https://kristin-kronstain-brown.github.io/internet-safety
 
