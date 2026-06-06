@@ -1,0 +1,20 @@
+---
+title: Red flags
+layout: default
+nav_order: 40
+---
+
+
+
+
+
+## Red flags
+
+- A quiet house does not mean everything is ok.
+
+- They're on the phone constantly
+- They panic or are scared if they're missing something
+- Their habits change
+- They retreat
+- Look for depression or excessive self-blame
+- Look for abuse or neglect
