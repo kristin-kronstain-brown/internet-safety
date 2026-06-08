@@ -5,3 +5,8 @@ gem "jekyll", "~> 4.4.1" # installed by `gem jekyll`
 
 gem "just-the-docs", "0.12.0" # pinned to the current release
 # gem "just-the-docs"        # always download the latest release
+
+# If building for GitHub Pages, you can use the github-pages gem group:
+group :jekyll_plugins do
+  gem "jekyll-remote-theme"
+end

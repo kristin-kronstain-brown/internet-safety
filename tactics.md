@@ -26,30 +26,25 @@ Patterns:
 
 ## Random
 
+- Apple recommends installing from the Kids category, but my kids never found things that way.
+- How do you know if the information the app collects is the problem or just the users of the app? Like how concerned should you be about the data security information listed in the app details?
 - Why does Love is Blind fails? Who you build people up to be is not who they actually are.
 - How do you get out of a sales pitch?
     - Firm No.
     - It's OK to be rude when you're saying No.
     - Safety is more important than politeness.
     - Understand marketing techniques.
-- From parent monitoring apps, how much can be limited inside a kid's apps?
-    - Figure out what settings you have control over.
+
 - Regular lessons just like cyber security at work
 - AI can be used to generate images for blackmail purposes
 - Boys especially can be won over with the value of digital currency
 - Accountability reviews of kids content
 - Do you know your kids followers? 
 - Read the comments made to your kid
-- Disable secret messaging in Facebook marketplace
 - Know what's being downloaded
-- Location services
-- Use a family Apple/gmail account for kids devices
 - No phones in rooms at night
-- Can the chat function be disabled in an app?
-- When they're playing a game, are they on the phone with other players? Video enabled?
 - Where are kids finding togetherness and community? If it's only online, that could be a problem.
 - What are the adults around kids teaching them is appropriate?
-- There are always new apps.
 - App icons can be changed or renamed to help hide them from parents.
 - Being real and clear is more important with kids.
 - Don't accept phones or stuff from others you don't know.
