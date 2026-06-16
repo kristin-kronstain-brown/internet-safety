@@ -6,7 +6,7 @@ nav_order: 30
 
 
 
-## Tactics
+# Tactics
 
 1. Fraud
 2. Coercion

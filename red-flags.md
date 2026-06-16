@@ -8,7 +8,7 @@ nav_order: 40
 
 
 
-## Red flags
+# Red flags
 
 - A quiet house does not mean everything is ok.
 
