@@ -18,7 +18,7 @@ Before you start installing apps, lay the foundation for the future. Even if you
     - Can't use the same login for multiple games though.
     - Use a generic name and random photo.
 
-1. Install a parent monitoring app.
+1. Install a parent monitoring app. 
 
 1. Learn what settings you do have control over in the parent monitoring app.
 
@@ -56,12 +56,11 @@ These are common permissions that can genuinely improve an app without being sus
 
 #### Requires stronger justification
 
-These permissions aren't necessarily bad, but users should expect a clear explanation:
+These permissions aren't necessarily bad, but users should have a clear understanding of how they are used:
 
 - Camera
 - Microphone
 - Storage/photos access
-- Precise location
 - Contacts
 - Calendar
 - Bluetooth
@@ -69,72 +68,67 @@ These permissions aren't necessarily bad, but users should expect a clear explan
 - SMS access
 - Call logs
 - Accessibility services
-- Device administrator privileges
+
 
 #### Potential red flags
 
-For many games and simple apps, you should ask why these are needed:
+For many games and simple apps, you should ask why these could be needed:
 
+- Precise location
+- Continuous background location
+- Permission to install other apps
 - In-app browser instead of using the system default browser
 - Contacts access
 - SMS reading
 - Call history access
-- Continuous background location
 - Accessibility permissions
-- Permission to install other apps
 - Broad file-system access
+- Device administrator privileges
 
-### How much can be limited from the parent-monitoring app?
-From parent monitoring apps, how much can be limited inside a kid's apps?
+### Get AI to tell you
 
-### Do you share an approximate or precise location with the app or other users? 
+It can be so difficult to get a good understanding of the app functionality from the labels or descriptions the app gives you on its details page. It is often easier to create a list of app functionalities, categorize them as you see fit, then have AI give you an overview of how that app stacks up against them.
 
-### Does it have open messaging? Can it be disabled? Does it have voice chat?
+Here's an example.
 
-### Do messages disappear?
+```
+I am designing the parameters of a parental review for an app my child wants to install. Look for the following functionality and tell me which things this app has.
 
-Like Snapchat. Disable secret messaging in Facebook marketplace
+Red:
+- Precise location shared with other users
+- Multiplayer / Competitive multiplayer
+- Messaging
+- Users interact
+- Open chats
+- Direct or group messaging
+- Allows public posting
+- Live messaging in voice or video chats
+- Secret or disappearing messages, like in Snapchat or secret messaging in Facebook marketplace
+- Users can trade or give each other resources.
+- Unrestricted Web Access, which might have embedded browser functionality or browser app to circumvent parental monitoring
 
-### What are the moderation tools? Does it have a profanity filter?
+Yellow:
+- Precise location shared with the app developer
+- Approximate location shared with other users
+- Approximate location shared with the app developer
+- Shares user generated content such as broadly distributed videos, photos, text, and/or audio created by users of the app.
 
-- Chat length is not a moderation tool. People can send multiple chats rather than just one.
+Green:
+- Chats that can be disabled in a parent monitoring app
+- Profanity filters
 
-## Can users trade/give each other resources?
+Describe the app's capabilities around these areas:
+- Moderation tools in open chats.
+- How are ads used to impact user play?
+- What is the age rating?
+- Is there any other functionality 
+```
 
-### Are players actively on the phone with each other? Video enabled?
 
-### Ads
+## How are updates monitored?
 
-### How are updates monitored?
-
-
-### Does it contain any common catch words?
-
-#### Unrestricted Web Access
-
-May include: embedded browser functionality or browser app.
-
-#### User-Generated Content
-
-May include: broadly distributed videos, photos, text, and/or audio created by users of the app.
-
-####  Messaging and Chat / Users interact / Multiplayer / Competitive multiplayer
-
-May include: text, voice and/or video chat, direct and/or group messaging, or public posting.
+As a parent, how do we know when one of these things are introduced to the app in an update?
  
+
+## App examples
 - Pocket Ants: Colony Simulator [Google Play](https://play.google.com/store/apps/details?id=com.ariel.zanyants&utm_source=na_Med) [Apple](https://apps.apple.com/us/app/pocket-ants-colony-simulator/id1532712160)
-
-
-What is the age rating?
-Could the permissions required legitmiately be used to make the software better?
-How much can be limited from the parent-monitoring app?
-Do you share an approximate or precise location with the app or other users? 
-Does it have open messaging? Can it be disabled? Does it have voice chat?
-Do messages disappear?
-What are the moderation tools? Does it have a profanity filter?
-Can users trade/give each other resources?
-Are players actively on the phone with each other? Video enabled?
-Does the description or tags contain any of the following common catch words?
-Unrestricted Web Access
-User-Generated Content
-Messaging and Chat / Users interact / Multiplayer / Competitive multiplayer
