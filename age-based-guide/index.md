@@ -11,14 +11,14 @@ Treat teaching your kids about internet safety like learning to cross a street o
 The goal is not "stranger danger." Strangers can be helpful, too.
 
 The goal is to build:
-- confidence
-- critical thinking
-- emotional awareness
-- healthy boundaries
-- knowing when to pause and ask an adult
+- Confidence
+- Critical thinking
+- Emotional awareness
+- Healthy boundaries
+- Knowing when to pause and ask an adult
 
 Kids learn best when:
-- conversations happen regularly
-- adults stay calm and nonjudgmental
-- examples are realistic
-- mistakes are treated as learning opportunities
+- Conversations happen regularly
+- Adults stay calm and nonjudgmental
+- Examples are realistic
+- Mistakes are treated as learning opportunities
