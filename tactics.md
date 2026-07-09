@@ -30,7 +30,6 @@ A strategy for acquiring control within conversation:
 - Figure out what people want from you.
 - Watch commercials and talk about what they are appealing toward and what they want out of you.
 
-## Tools How do you get out of a sales pitch?
+## How do you get out of a sales pitch?
 
 Firm "No". It's OK to feeling like you're being rude when you're protecting yourself. Safety is more important than politeness.
-- 
