@@ -7,7 +7,7 @@ nav_order: 30
 
 # "Can I install this?"
 
-There are always going to be new apps that kids want to install. Form a plan for deciding which apps are OK to install and which are not.
+There are always going to be new apps that kids want to install. Form a plan for deciding which apps are OK to install and which are not. Apple recommends installing from the Kids category, but kids don't always find things that way.
 
 ## Preparing a device
 
@@ -39,7 +39,7 @@ Learn more about the age-based ratings for your operating system:
 - [Apple](https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions/)
     - In any app's details page, in the Information section, look for "Age rating" and "Contains" sections. 
 
-### Could the permissions required legitmiately be used to make the software better?
+### Could the permissions required legitimately be used to make the software better?
 There is an expected amount of permissions an app might require. These things could be gathered to make the software better, rather than collect information about you personally.
 
 
@@ -128,6 +128,10 @@ Describe the app's capabilities around these areas:
 ## How are updates monitored?
 
 As a parent, how do we know when one of these things are introduced to the app in an update?
+
+## Determining if users or apps are the problem
+
+How do you know if the information the app collects is the problem or just the users of the app? Like how concerned should you be about the data security information listed in the app details?
  
 
 ## App examples
