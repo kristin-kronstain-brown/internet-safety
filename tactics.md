@@ -1,14 +1,14 @@
 ---
-title: Tactics
+title: Chat tactics
 layout: default
 nav_order: 30
 ---
 
 
 
-# Tactics
+# Chat tactics
 
-These are common tactics for manipulation:
+These are common tactics for manipulation in online chats:
 1. Fraud
 2. Coercion
 3. Force
@@ -25,11 +25,11 @@ A strategy for acquiring control within conversation:
         - "Your parent won't let you do what you want on your phone? I'll send you another one."
 6. Total control.
 
-## Understand marketing techniques
+## Teach kids basic marketing techniques
 
 - Figure out what people want from you.
 - Watch commercials and talk about what they are appealing toward and what they want out of you.
 
-## How do you get out of a sales pitch?
+## Provide strategies for getting out
 
 Firm "No". It's OK to feeling like you're being rude when you're protecting yourself. Safety is more important than politeness.
