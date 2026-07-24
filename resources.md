@@ -22,6 +22,6 @@ nav_order: 100
 - [Guilford County, NC Required Safety Videos](https://www.gcsnc.com/families/safety-emergency-management/protecting-our-students-required-safety-videos)
 
 
-Related
+## Related
 
 - [Talking to kids about drugs and alcohol](https://www.nspcc.org.uk/keeping-children-safe/talking-drugs-alcohol/)
