@@ -30,6 +30,16 @@ A strategy for acquiring control within conversation:
 - Figure out what people want from you.
 - Watch commercials and talk about what they are appealing toward and what they want out of you.
 
+The 4 Ps of Marketing
+
+Marketing relies on four basic rules, often called the "4 Ps" 
+1. Product: Predators are selling themselves as a friend, someone who feels supportive, not strict.
+2. Price: Predators are willing to give up something to gain something.
+3. Place: Predators want a tool that provides private conversation.
+4. Promotion: Predators might push something.
+
 ## Provide strategies for getting out
 
-Firm "No". It's OK to feeling like you're being rude when you're protecting yourself. Safety is more important than politeness.
+- Firm "No". It's OK to feeling like you're being rude when you're protecting yourself. Safety is more important than politeness.
+- Block them.
+- Remove the app.

@@ -39,6 +39,10 @@ Learn more about the age-based ratings for your operating system:
 - [Apple](https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions/)
     - In any app's details page, in the Information section, look for "Age rating" and "Contains" sections. 
 
+### Chat features
+
+
+
 ### Could the permissions required legitimately be used to make the software better?
 There is an expected amount of permissions an app might require. These things could be gathered to make the software better, rather than collect information about you personally.
 
@@ -89,7 +93,7 @@ For many games and simple apps, you should ask why these could be needed:
 
 It can be so difficult to get a good understanding of the app functionality from the labels or descriptions the app gives you on its details page. It is often easier to create a list of app functionalities, categorize them as you see fit, then have AI give you an overview of how that app stacks up against them.
 
-Here's an example.
+Here's an example. At this time, the parent does not want the kids to have the ability to interact with other users until they've gone through training on predatory behavior to look out for.
 
 ```
 I am designing the parameters of a parental review for an app my child wants to install. Look for the following functionality and tell me which things this app has.
@@ -115,7 +119,8 @@ Yellow:
 
 Green:
 - Chats that can be disabled in a parent monitoring app
-- Profanity filters
+- Chats that are local only through sharing a Wifi or Bluetooth connection
+- Chats include profanity filters
 
 Describe the app's capabilities around these areas:
 - Moderation tools in open chats.
@@ -123,6 +128,18 @@ Describe the app's capabilities around these areas:
 - What is the age rating?
 - Is there any other functionality 
 ```
+
+### App examples
+This list is meant to show example permissions and combinations based on .
+
+Red
+- Pocket Ants: Colony Simulator [Google Play](https://play.google.com/store/apps/details?id=com.ariel.zanyants&utm_source=na_Med) [Apple](https://apps.apple.com/us/app/pocket-ants-colony-simulator/id1532712160)
+    - Includes: Users Interact, Multiplayer, Competitive Multiplayer
+
+
+Green:
+- Farming Simulator 18 [Google Play](https://play.google.com/store/apps/details?id=com.giantssoftware.fs18.google&utm_source=na_Med)
+    - Includes local multiplayer mode for WiFi and Bluetooth
 
 
 ## How are updates monitored?
@@ -134,5 +151,3 @@ As a parent, how do we know when one of these things are introduced to the app i
 How do you know if the information the app collects is the problem or just the users of the app? Like how concerned should you be about the data security information listed in the app details?
  
 
-## App examples
-- Pocket Ants: Colony Simulator [Google Play](https://play.google.com/store/apps/details?id=com.ariel.zanyants&utm_source=na_Med) [Apple](https://apps.apple.com/us/app/pocket-ants-colony-simulator/id1532712160)
