@@ -1,0 +1,215 @@
+/*
+  Styling for the printable games and their answer keys.
+
+  A game is authored in markdown inside <div class="game"> … </div>. The blank
+  line after the opening tag is required: it closes the HTML block so Goldmark
+  parses the markdown inside rather than passing it through verbatim.
+
+  Add game-cards to the wrapper to render a markdown table as a sheet of
+  cut-out cards. The table still has to carry a header row, because markdown
+  requires one, so leave it empty and this hides it.
+
+  An answer key lives in its own <div class="answers"> block AFTER the game's
+  closing tag, never inside it. That separation is what lets a game print
+  without giving the answers away.
+*/
+
+.game {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.25rem 1.25rem;
+  margin: 2rem 0;
+  background: var(--background-fg2);
+}
+
+.game > h3:first-child,
+.game > h4:first-child {
+  margin-top: 0;
+}
+
+.game-meta {
+  color: var(--color3);
+  font-size: .9em;
+  margin-top: -.25em;
+}
+
+.card-sheet {
+  margin: 1.5rem 0;
+}
+
+.answers {
+  border-left: 3px solid var(--border-color);
+  padding: .1rem 0 .1rem 1rem;
+  margin: -1.25rem 0 2rem;
+}
+
+.answers summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* The theme stripes every other table row. On a bingo card or a sheet of
+   cut-out cards that looks like an error rather than a design. */
+#article-content .game-cards table tr:nth-child(2n),
+#article-content .game-grid table tr:nth-child(2n) {
+  background: none;
+}
+
+.game-cards table {
+  border-collapse: separate;
+  border-spacing: .4rem;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.game-cards thead {
+  display: none;
+}
+
+.game-cards td {
+  border: 2px dashed var(--color3);
+  border-radius: 6px;
+  padding: 1.1rem .6rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.35;
+}
+
+/* A grid game such as bingo: square cells, no dashed cut lines. */
+.game-grid table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.game-grid thead {
+  display: none;
+}
+
+.game-grid td {
+  border: 1px solid var(--color3);
+  padding: .9rem .5rem;
+  text-align: center;
+  vertical-align: middle;
+  height: 4.5rem;
+  font-size: .95em;
+  line-height: 1.3;
+}
+
+.print-btn {
+  float: right;
+  margin: 0 0 .5rem .75rem;
+  padding: .35rem .8rem;
+  font: inherit;
+  font-size: .85em;
+  color: var(--color);
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  color: var(--color-hover);
+  border-color: var(--color-hover);
+}
+
+@media print {
+  /* Drop every piece of site chrome so a sheet of paper holds only the page. */
+  #site-header,
+  #sidebar,
+  #toc,
+  #article-nav,
+  #article-footer,
+  #site-footer,
+  .print-btn {
+    display: none !important;
+  }
+
+  #site-main-content-wrapper,
+  #site-main-content-wrapper main,
+  #article,
+  #article-content {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Answer keys stay off paper unless you deliberately print one, so a game
+     handed to a kid never has the answers on the back of it. Each key has its
+     own "Print answer key" button for when you do want it. */
+  .answers {
+    display: none !important;
+  }
+
+  .game {
+    border: 1px solid #000;
+    background: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .game-cards td,
+  .game-grid td {
+    border-color: #000;
+  }
+
+  /* A game with several grids, such as the bingo cards, is taller than a page,
+     so break-inside on the game block gets ignored. Keeping each table whole
+     is what actually stops a card splitting across two sheets. */
+  .game-cards table,
+  .game-grid table {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* The theme prints every link's href after it. On a game sheet that is
+     noise, and it breaks up the cut-out cards. */
+  #article-content .game a:after {
+    content: "";
+  }
+
+  /* Each bingo card gets a sheet to itself when the whole game is printed,
+     including the first one, so no card shares a page with the rules. */
+  .card-sheet {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* A card always has a page to itself now, so let it fill the sheet. Four
+     rows at 1.9in plus the label clears a Letter page with 0.5in margins. */
+  .game-grid .card-sheet td {
+    height: 1.9in;
+    font-size: 12pt;
+  }
+
+  /* Set by the print buttons: print that one block and nothing else.
+     The script marks the target .printing and every ancestor up to
+     #article-content .print-keep-open, so hiding the other children at each
+     level leaves exactly the target's subtree. That works whether the target
+     is a whole game or a single card nested inside one. */
+  body.print-one #article-header,
+  body.print-one .print-keep-open > *:not(.print-keep-open):not(.printing) {
+    display: none !important;
+  }
+
+  body.print-one .answers.printing {
+    display: block !important;
+  }
+
+  /* No leading blank sheet when a single card is printed by itself. */
+  body.print-one .card-sheet {
+    break-before: auto;
+    page-break-before: auto;
+  }
+
+  body.print-one .print-keep-open,
+  body.print-one .printing {
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+}

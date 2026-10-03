@@ -1,0 +1,18 @@
+{{/*
+  Overrides themes/docura/layouts/_default/baseof.html.
+
+  Only change: .Site.LanguageCode was deprecated in Hugo v0.158.0 and is slated
+  for removal. .Site.Language.Locale replaces it.
+*/}}
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale | default `en-US` }}">
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body>
+    {{ partial "site-header" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "site-footer" . }}
+    {{ partial "scripts" . }}
+  </body>
+</html>

@@ -1,0 +1,12 @@
+# Docura builds each link as /<section>/<title | urlize>/, so every title here
+# must match the filename of the page it points at in content/en/docs/.
+- title: For parents
+  pages:
+    - title: Start here
+    - title: Chat tactics
+    - title: Can I install this?
+    - title: Red flags
+
+- title: Reference
+  pages:
+    - title: Resources

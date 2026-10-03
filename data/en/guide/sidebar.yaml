@@ -1,0 +1,11 @@
+# Docura builds each link as /<section>/<title | urlize>/, so every title here
+# must match the filename of the page it points at in content/en/guide/.
+# Use plain hyphens, not en dashes: urlize strips en dashes without replacing them.
+- title: Age-based guide
+  pages:
+    - title: Overview
+    - title: Ages 4-6
+    - title: Ages 7-9
+    - title: Ages 10-12
+    - title: Ages 13-15
+    - title: Ages 16-18

@@ -1,0 +1,38 @@
+{{/*
+  Overrides themes/docura/layouts/partials/scripts.html.
+
+  The stock partial registers themes/docura/static/sw.js as a service worker.
+  That file is shipped as a static asset, so Hugo never processes the Go
+  template expression in its cache name, and its precache list points at paths
+  the theme no longer builds, such as ./scss/base.css and a glob under ./docs.
+  cache.addAll rejects on the first missing entry, so the worker fails to
+  install and only logs an error. Registering it from a project subpath would
+  also scope it wrong. This site does not need offline support, so the
+  registration is gone.
+
+  The Algolia block is kept, guarded by params.algolia.en in hugo.yaml.
+*/}}
+{{ $dropdown := resources.Get "js/component/dropdown.js" }}
+{{ $colorPreference := resources.Get "js/component/color-preference.js" }}
+{{ $articleNav := resources.Get "js/component/article-nav.js" }}
+{{ $sidebar := resources.Get "js/component/sidebar.js" }}
+{{ $toc := resources.Get "js/component/toc.js" }}
+{{/* Project file, not a theme one: adds the per-game print button. */}}
+{{ $gamePrint := resources.Get "js/game-print.js" }}
+{{ $baseJs := slice $dropdown $colorPreference $articleNav $sidebar $toc $gamePrint | resources.Concat "js/base.js" | minify }}
+
+<script type="text/javascript" src="{{ $baseJs.RelPermalink }}"></script>
+
+{{ $algolia := index .Site.Params.algolia .Site.Language.Lang }}
+{{ if $algolia }}
+  {{ $docsearch := resources.Get "js/component/docsearch.min.js" }}
+  <script src="{{ $docsearch.RelPermalink }}"></script>
+  <script type="application/javascript">
+      docsearch({
+          container: '{{ $algolia.container }}',
+          appId: '{{ $algolia.appId }}',
+          indexName: '{{ $algolia.indexName }}',
+          apiKey: '{{ $algolia.apiKey }}',
+      });
+  </script>
+{{ end }}

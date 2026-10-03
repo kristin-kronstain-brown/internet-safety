@@ -1,0 +1,78 @@
+baseURL: https://kristin-kronstain-brown.github.io/internet-safety/
+
+# GitInfo drives the "Last updated" date in the article footer.
+# CI must check out with fetch-depth: 0 for this to be accurate.
+enableGitInfo: true
+
+defaultContentLanguage: en
+
+languages:
+  en:
+    weight: 1
+    label: English
+    locale: en-US
+    contentDir: content/en
+    title: Internet Safety
+    params:
+      description: Teaching kids how to live safely in a constantly connected world.
+
+module:
+  imports:
+    - path: github.com/docura/docura
+
+# Docura ships no list or taxonomy template, so these kinds would render blank.
+# Each section reaches its first page through an alias instead.
+disableKinds:
+  - taxonomy
+  - term
+  - section
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  author:
+    name: Kristin Kronstain Brown
+    url: https://github.com/kristin-kronstain-brown
+
+  themeColors:
+    light: '#ffffff'
+    dark: '#121212'
+
+  years:
+    start: 2025
+    present: 2026
+
+  social:
+    github: kristin-kronstain-brown
+
+  home:
+    repository: kristin-kronstain-brown/internet-safety
+
+  # Docura indexes these per language. An empty value disables DocSearch.
+  algolia:
+    en: ''
+
+menu:
+  main:
+    - url: /
+      name: Home
+      identifier: home
+      pre: "<i class='icon icon-home'></i>"
+      weight: 1
+
+    - url: /docs/
+      name: For parents
+      identifier: docs
+      pre: "<i class='icon icon-book'></i>"
+      weight: 2
+
+    - url: /guide/
+      name: Age-based guide
+      identifier: guide
+      pre: "<i class='icon icon-book'></i>"
+      weight: 3

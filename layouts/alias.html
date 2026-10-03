@@ -1,0 +1,21 @@
+{{/*
+  Overrides Hugo's built-in _internal/alias.html.
+
+  The built-in template redirects to .Permalink, which is absolute and bakes in
+  whatever baseURL the build used. A production build served from anywhere else
+  therefore bounces the visitor to the live site: open public/ locally, click
+  "Age-based guide", and you land on github.io rather than localhost.
+
+  .Page.RelPermalink is root-relative, so it still carries the /internet-safety/
+  project subpath but works on whatever host is serving the files.
+*/}}
+<!DOCTYPE html>
+<html lang="{{ .Page.Language.Lang }}">
+  <head>
+    <title>{{ .Page.RelPermalink }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ .Page.RelPermalink }}">
+  </head>
+</html>

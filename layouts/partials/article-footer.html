@@ -1,0 +1,63 @@
+{{/*
+  Overrides themes/docura/layouts/partials/article-footer.html.
+
+  Same fix as the sidebar override: the stock partial builds the prev and next
+  links with printf "/<section>/<slug>/", which breaks under the GitHub Pages
+  project subpath. Each path now goes through relLangURL, which also collapses
+  the theme's two language branches into one.
+*/}}
+{{ $lastMod := .Lastmod.Format "2006-01-02" }}
+
+{{ $prevPageTitle := "" }}
+{{ $nextPageTitle := "" }}
+{{ $prevPageHref := "" }}
+{{ $nextPageHref := "" }}
+
+{{ $dataLocale := index hugo.Data .Site.Language.Lang }}
+{{ if isset $dataLocale .Section }}
+  {{ $data := index hugo.Data .Site.Language.Lang .Section "sidebar" }}
+  {{- $url := split .Permalink "/" -}}
+  {{- $urlPageSlug := index $url (sub (len $url) 2) -}}
+
+  {{ $isSectionIndex := eq $urlPageSlug .Section }}
+  {{ $isActivePagePassed := false }}
+  {{ $isNextPagePassed := false }}
+
+  {{- range $group := $data -}}
+    {{ if $isNextPagePassed }}
+      {{ break }}
+    {{ end }}
+
+    {{- range $page := $group.pages -}}
+      {{- $pageSlug := $page.title | urlize -}}
+      {{- $isActivePage := or $isSectionIndex (eq $urlPageSlug $pageSlug) -}}
+
+      {{ if $isActivePagePassed }}
+        {{ $nextPageTitle = $page.title }}
+        {{ $nextPageHref = printf "%s/%s/" $.Section $pageSlug | relLangURL }}
+        {{ $isNextPagePassed = true }}
+        {{ break }}
+
+      {{ else if $isActivePage }}
+        {{ $isActivePagePassed = true }}
+
+      {{ else }}
+        {{ $prevPageTitle = $page.title }}
+        {{ $prevPageHref = printf "%s/%s/" $.Section $pageSlug | relLangURL }}
+
+      {{ end }}
+    {{ end }}
+  {{- end }}
+{{ end }}
+
+<footer id="article-footer">
+  <time id="article-last-updated" datetime="{{ $lastMod }}"><i class="icon icon-calendar"></i>&nbsp;Last updated: {{ $lastMod }}</time>
+
+  {{ if ne $prevPageHref "" }}
+    <a id="article-prev-link" href="{{ $prevPageHref }}" title="{{ $prevPageTitle }}"><i class="icon icon-prev icon-colored"></i> Prev</a>
+  {{ end }}
+
+  {{ if ne $nextPageHref "" }}
+    <a id="article-next-link" {{ if eq $prevPageHref "" }}data-first-page="true" {{ end }}href="{{ $nextPageHref }}" title="{{ $nextPageTitle }}">Next <i class="icon icon-next icon-colored"></i></a>
+  {{ end }}
+</footer>

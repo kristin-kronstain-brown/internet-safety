@@ -1,0 +1,37 @@
+{{/*
+  Overrides themes/docura/layouts/partials/sidebar.html.
+
+  The stock partial builds every link with printf "/<section>/<slug>/", which is
+  absolute from the server root. This site is published under a GitHub Pages
+  project subpath (/internet-safety/), so those links all 404. Piping the same
+  path through relLangURL prefixes the baseURL path and the language, which also
+  collapses the theme's two near-identical language branches into one.
+*/}}
+{{ $data := index hugo.Data .Site.Language.Lang .Section "sidebar" }}
+
+{{- $url := split .Permalink "/" -}}
+{{- $urlPageSlug := index $url (sub (len $url) 2) -}}
+
+<aside id="sidebar">
+  <span class="btn-close"><i class="icon icon-close"></i></span>
+
+  <div class="sticky">
+    {{- range $group := $data -}}
+      <strong class="sidebar-section">{{ $group.title }}</strong>
+
+      {{- range $index, $page := $group.pages -}}
+        {{- $pageSlug := $page.title | urlize -}}
+        {{- $isActivePage := eq $urlPageSlug $pageSlug -}}
+        {{- $href := printf "%s/%s/" $.Section $pageSlug | relLangURL -}}
+
+        <a class="sidebar-link {{ if $isActivePage }}current{{ end }}" href="{{ $href }}">
+          {{ if and (eq $index 0) $group.replaceFirstPageTitle }}
+            {{ $group.replaceFirstPageTitle }}
+          {{ else }}
+            {{ $page.title }}
+          {{ end }}
+        </a>
+      {{- end }}
+    {{- end }}
+  </div>
+</aside>

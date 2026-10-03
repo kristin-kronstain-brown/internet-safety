@@ -1,0 +1,12 @@
+{{/*
+  Overrides themes/docura/layouts/partials/favicons.html.
+
+  The stock partial hardcodes /manifest.json and /img/icon/*, which resolve to
+  the server root rather than the /internet-safety/ project subpath. relURL
+  prefixes the baseURL path.
+*/}}
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<link rel="icon" href="{{ "img/icon/favicon.ico" | relURL }}">
+<link rel="icon" href="{{ "img/icon/icon-16.png" | relURL }}" sizes="16x16" type="image/png">
+<link rel="icon" href="{{ "img/icon/icon-32.png" | relURL }}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ "img/icon/icon-180.png" | relURL }}" sizes="180x180">

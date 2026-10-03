@@ -1,0 +1,53 @@
+{{/*
+  Overrides themes/docura/layouts/partials/site-header.html.
+
+  Two changes from the stock partial:
+    - The brand link is "/" upstream, which leaves the /internet-safety/ project
+      subpath. It now goes through relLangURL.
+    - The language dropdown is dropped. This site is English only, so the stock
+      markup renders a control whose single entry links to "#".
+    - The "is this entry active?" test compares against the resolved home URL
+      rather than a literal "/", because Hugo has already rewritten menu URLs
+      to include the baseURL path by the time this partial sees them.
+*/}}
+<header id="site-header">
+  <!-- brand -->
+  <div id="site-header-brand">
+    <a href="{{ "" | relLangURL }}">{{ .Site.Title }}</a>
+  </div>
+
+  <!-- controls -->
+  <div id="site-header-controls">
+    <!-- theme selector -->
+    <div class="dropdown">
+      <button class="dropdown-btn" aria-haspopup="menu" aria-label="theme selector">
+        <i class="icon icon-brightness"></i>
+        <i class="icon icon-select"></i>
+      </button>
+      <ul role="menu" class="dropdown-menu">
+        <li role="menuitem"><button class="color-scheme" data-value="light"><i class="icon icon-light-mode"></i> Light</button></li>
+        <li role="menuitem"><button class="color-scheme" data-value="dark"><i class="icon icon-dark-mode"></i> Dark &nbsp;</button></li>
+        <li role="menuitem"><button class="color-scheme" data-value="night"><i class="icon icon-night-mode"></i> Night</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- main menu -->
+  <div id="site-header-menu">
+    <nav>
+      <ul>
+        {{ $currentPageURL := .Permalink }}
+        {{ $isHomePage := eq $currentPageURL ($.Site.BaseURL | absLangURL) }}
+        {{ range .Site.Menus.main }}
+          {{/* Hugo already prefixes menu .URL with the baseURL path. */}}
+          {{ $isHomeEntry := eq .URL ("" | relLangURL) }}
+          {{ $isActive := or (and $isHomeEntry $isHomePage) (and (not $isHomeEntry) (in $currentPageURL .URL)) }}
+          <li><a href="{{ .URL }}"{{ if $isActive }} class="active"{{ end }}>{{ .Pre | safeHTML }}{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+
+  <!-- search -->
+  <div id="site-header-search"></div>
+</header>
