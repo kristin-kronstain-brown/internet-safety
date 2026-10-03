@@ -8,8 +8,9 @@ description: 'Privacy, asking before clicking or sharing, trusted adults, and pe
 This is the right age to discuss:
 - Privacy
 - Asking before clicking or sharing
-- Understanding that people online are not automatically who they say they are
 - Trusted adults
+- Online people are real people, but sometimes pretending
+
 
 ## Lesson 1: Privacy
 
@@ -31,11 +32,11 @@ There is also a [word search](private-information-word-search.png) for this less
 
 <div class="game game-cards">
 
-### Game: Private or okay to share?
+### Game: Private or OK to share?
 
 **Players:** 2 · **Time:** 10 minutes · **You need:** scissors
 
-Cut out the twelve cards. Make two piles on the table, one labeled **Private** and one labeled **Okay to share**. Read each card out loud and let your kid choose the pile. Do not correct a wrong answer straight away, ask "who could use that, and what for?" first.
+Cut out the twelve cards. Make two piles on the table, one labeled **Private** and one labeled **OK to share**. Read each card out loud and let your kid choose the pile. Do not correct a wrong answer straight away, ask "who could use that, and what for?" first.
 
 | | | |
 |---|---|---|
@@ -55,7 +56,7 @@ Cut out the twelve cards. Make two piles on the table, one labeled **Private** a
 
 Private: my home address, the name of my school, my phone number, my birthday, my password, a photo of my house, my best friend's name.
 
-Okay to share: my favorite color, my favorite dinosaur, a game I like to play, what I had for lunch, my favorite song.
+OK to share: my favorite color, my favorite dinosaur, a game I like to play, what I had for lunch, my favorite song.
 
 "My best friend's name" is the one worth slowing down on. It is private because it belongs to someone else, which is a rule kids can learn early.
 
@@ -153,6 +154,8 @@ Put the finished hand somewhere your kid can see it. Revisit it once a year, bec
 
 </div>
 
+### Learning through movies
+
 For a version using characters they already know, make a list of movie characters who proved to be trusted adults.
 
 | Movie                    | Trusted adult | What they do                                                                                                              | Why they're trusted                                                                 | Trusted adult quality                                     |
@@ -191,6 +194,9 @@ The point is not to get it right. The point is that you can never tell from the 
 **Talk about it:** ask your kid how they could find out if a costume is a costume. Walk them to the real answer, which is that they cannot, so a grown-up helps.
 
 </div>
+
+
+### Learning through movies
 
 For a version using characters they already know, make a list of movie characters who were pretending to be someone they weren't.
 
