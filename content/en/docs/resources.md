@@ -1,6 +1,7 @@
 ---
 title: 'Resources'
 description: 'Organizations, guides, and activities for teaching kids about internet safety.'
+weight: 50
 ---
 
 These are the outside resources this guide draws on, grouped by what you need them for.

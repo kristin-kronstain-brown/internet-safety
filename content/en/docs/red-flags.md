@@ -17,7 +17,7 @@ None of these prove anything on their own. A teenager who withdraws might be dea
 
 ## What to do
 
-Start with the followers list. Go through it together and ask who each person is. Watch how their demeanor shifts from name to name, because the reaction usually tells you more than the answer does.
+Start with the followers list, which is the account review from [Start here]({{< relref "start-here.md#review-your-kids-accounts-together" >}}) done with a specific worry in mind. Go through it together and ask who each person is. Watch how their demeanor shifts from name to name, because the reaction usually tells you more than the answer does.
 
 Keep your own reaction flat. A kid who expects to lose their phone or get yelled at stops telling you things, and that costs you far more than the app did.
 

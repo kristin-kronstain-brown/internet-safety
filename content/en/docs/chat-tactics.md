@@ -6,11 +6,13 @@ weight: 30
 
 Someone who wants something from a kid tends to work a conversation the same way every time. Knowing the pattern is what lets a kid notice it while it is happening.
 
-Manipulation in online chats comes down to three tactics:
+This page covers two halves of one pattern: the three tactics someone uses, and the stages they move through to get there.
 
-1. Fraud
-2. Coercion
-3. Force
+## The three tactics
+
+1. **Fraud.** Lying to get something, such as pretending to be another kid or promising a prize that does not exist.
+2. **Coercion.** Pressure and threats, such as "if you don't send another one, I'll post the first."
+3. **Force.** Taking the choice away, by seizing an account or a device.
 
 ## How someone takes control of a conversation
 
@@ -45,11 +47,11 @@ Marketing relies on four basic rules, often called the 4 Ps. A predator uses all
 3. **Place.** Predators want a tool that gives them a private conversation.
 4. **Promotion.** Predators push, usually with urgency, so the kid acts before thinking.
 
-## Provide strategies for getting out
+## Give kids a way out
 
 A kid needs to know what to do, not only what to notice.
 
 - Say no, firmly. Feeling rude is fine. Safety matters more than politeness.
 - Block them.
 - Remove the app.
-- Tell a trusted adult, even if the conversation has been going on for a long time.
+- Tell a [trusted adult]({{< relref "/guide/ages-4-6/index.md#lesson-3-trusted-adults" >}}), even if the conversation has been going on for a long time.

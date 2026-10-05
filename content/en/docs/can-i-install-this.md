@@ -37,7 +37,7 @@ Learn more about the age-based ratings for your operating system:
 
 For most families this question matters more than the age rating does, because it decides whether strangers can reach your child at all. Ratings rarely answer it directly, so look for the specific capability.
 
-Treat these as a no until your kid has been taught what predatory behavior looks like:
+Treat these as a no until your kid has been taught what [predatory behavior looks like]({{< relref "chat-tactics.md" >}}):
 
 - Open chat with strangers, including lobby, guild, and party chat
 - Direct or group messaging

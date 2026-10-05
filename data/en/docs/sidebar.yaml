@@ -1,10 +1,13 @@
 # Docura builds each link as /<section>/<title | urlize>/, so every title here
 # must match the filename of the page it points at in content/en/docs/.
+# Order here must match the `weight` in each page's front matter. Docura ignores
+# weight and reads this file, so this list is what actually decides the order of
+# the sidebar and of the prev/next links in the page footer.
 - title: For parents
   pages:
     - title: Start here
-    - title: Chat tactics
     - title: Can I install this?
+    - title: Chat tactics
     - title: Red flags
 
 - title: Reference

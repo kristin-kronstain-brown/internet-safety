@@ -43,3 +43,11 @@ Agree up front that you will look, and how often. A review your kid expects feel
 - Get into your kid's business without scaring them into hiding things.
 
 Watch for renamed and disguised apps. Both the icon and the name can be changed, so a calculator on the home screen is not always a calculator.
+
+## Where to go next
+
+- [Can I install this?]({{< relref "can-i-install-this.md" >}}) gives you a repeatable way to decide which apps your kid can have, so the answer does not depend on how worn down you are on the day they ask.
+- [Chat tactics]({{< relref "chat-tactics.md" >}}) covers how someone talks a kid into something, one stage at a time. Read it before you need it rather than after.
+- [Red flags]({{< relref "red-flags.md" >}}) is for when something already feels wrong: what to look for, and what to do about it.
+
+Together these four pages are the parent-facing half of this guide. The [age-based guide]({{< relref "/guide/overview.md" >}}) is the other half, covering what to teach your kid and when, with a printable game for every lesson.
