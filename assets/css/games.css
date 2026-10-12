@@ -22,8 +22,13 @@
   background: var(--background-fg2);
 }
 
-.game > h3:first-child,
-.game > h4:first-child {
+/* The print script puts its button in front of the heading, so the heading
+   is only the first child until the script runs. The #article-content prefix
+   is needed to outrank the theme's heading margin, which is set by id. */
+#article-content .game > h3:first-child,
+#article-content .game > h4:first-child,
+#article-content .game > .print-btn:first-child + h3,
+#article-content .game > .print-btn:first-child + h4 {
   margin-top: 0;
 }
 
@@ -114,6 +119,11 @@
   border-color: var(--color-hover);
 }
 
+@page {
+  size: letter;
+  margin: .5in;
+}
+
 @media print {
   /* Drop every piece of site chrome so a sheet of paper holds only the page. */
   #site-header,
@@ -159,10 +169,27 @@
   /* A game with several grids, such as the bingo cards, is taller than a page,
      so break-inside on the game block gets ignored. Keeping each table whole
      is what actually stops a card splitting across two sheets. */
-  .game-cards table,
   .game-grid table {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  /* Cut-out cards have to be big enough to hold and shuffle. Sized to the
+     text alone, a one-line card prints as a thin strip, so give every card
+     room around the words and some height to start from. */
+  .game-cards table {
+    border-spacing: .15in;
+  }
+
+  .game-cards tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .game-cards td {
+    height: .75in;
+    padding: .2in;
+    font-size: 12pt;
   }
 
   /* The theme prints every link's href after it. On a game sheet that is
@@ -197,6 +224,24 @@
 
   body.print-one .answers.printing {
     display: block !important;
+  }
+
+  /* A card game printed by its own button gets the whole sheet. Stretch the
+     game to a full page and let the table take whatever the rules do not
+     use: a table given extra height shares it out evenly across its rows, so
+     the cards grow as big as the page allows. It is a min-height, not a
+     height, so a game with more text than a page holds shows up as two pages
+     rather than being clipped silently at the bottom edge. 9.9in rather than
+     the full 10in inside the margins leaves slack for rounding, which would
+     otherwise push out a blank second page. */
+  body.print-one .game-cards.printing {
+    display: flex;
+    flex-direction: column;
+    min-height: 9.9in;
+  }
+
+  body.print-one .game-cards.printing > table {
+    flex: 1 1 auto;
   }
 
   /* No leading blank sheet when a single card is printed by itself. */
