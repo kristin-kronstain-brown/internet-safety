@@ -166,6 +166,13 @@
     border-color: #000;
   }
 
+  /* A 1px border prints as a 0.75pt hairline, and a print preview scaled to
+     fit the window can round a line that thin down to nothing, dropping whole
+     rows and columns of a bingo card. 1.5pt survives the scaling. */
+  .game-grid td {
+    border-width: 1.5pt;
+  }
+
   /* A game with several grids, such as the bingo cards, is taller than a page,
      so break-inside on the game block gets ignored. Keeping each table whole
      is what actually stops a card splitting across two sheets. */
