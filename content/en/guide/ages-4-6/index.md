@@ -130,7 +130,7 @@ Say the rest of this lesson to your kid directly. A trusted adult is someone who
 - Tells the truth.
 - Encourages asking for help.
 
-<div class="game">
+<div class="game game-form">
 
 ### Game: My five trusted adults
 

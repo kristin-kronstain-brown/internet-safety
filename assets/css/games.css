@@ -9,6 +9,9 @@
   cut-out cards. The table still has to carry a header row, because markdown
   requires one, so leave it empty and this hides it.
 
+  Add game-form to the wrapper for a fill-in worksheet, so every column gets
+  the same width and long headers wrap instead of crowding out the blanks.
+
   An answer key lives in its own <div class="answers"> block AFTER the game's
   closing tag, never inside it. That separation is what lets a game print
   without giving the answers away.
@@ -99,6 +102,25 @@
   height: 4.5rem;
   font-size: .95em;
   line-height: 1.3;
+}
+
+/* A fill-in worksheet. Sized to its content, a table puts all the width
+   into the long headers and leaves the blank columns too narrow to write
+   in, so split the width evenly and wrap the headers instead. */
+.game-form table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.game-form th {
+  white-space: normal;
+  overflow-wrap: break-word;
+  vertical-align: bottom;
+  line-height: 1.3;
+}
+
+.game-form td {
+  height: 2.5rem;
 }
 
 .print-btn {
